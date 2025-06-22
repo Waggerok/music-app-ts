@@ -1,16 +1,30 @@
 import { BrowserRouter } from 'react-router-dom'
 import AppRouter from './router/app-router';
+import { Navbar } from '@/widgets';
 
 function App() {
-
   return (
-    <BrowserRouter>
+	<>
+		<BrowserRouter>		
+			{/* {location.pathname !== 'auth' 
+				?
+				<div className="flex items-center justify-center">
+					<Navbar/>
+				</div>
+				:
+				null
+			} */}
 
-      <div className="p-4">
-        <AppRouter/>
-      </div>
+			<div className="flex items-center justify-center">
+				<Navbar/>
+			</div>
+			
 
-    </BrowserRouter>
+			<div className="p-4">
+				<AppRouter/>
+			</div>
+		</BrowserRouter>	
+	</>    
   )
 }
 

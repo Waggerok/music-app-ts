@@ -6,14 +6,14 @@ import { AdminPage, AuthPage, FeedbackPage, MainPage, NotFoundPage, ProfilePage,
 const AppRouter = () => {
     return (
         <Routes>
-            <Route path='*' element={<MainPage/>}/>
+            <Route path='/' element={<MainPage/>}/>
+            <Route path='*' element={<NotFoundPage/>}/>
             <Route path='/auth' element={<AuthPage/>}/>
             <Route path='/profile/:id' element={<ProfilePage/>}/>
             <Route path='/admin' element={<AdminPage/>}/>
             <Route path='/feedback' element={<FeedbackPage/>}/>
             <Route path='/tracks' element={<TracksPage/>}/>
             <Route path='/tracks/:id' element={<TrackPage/>}/>
-            <Route path='/not-found' element={<NotFoundPage/>}/>
         </Routes>
     )
 };
